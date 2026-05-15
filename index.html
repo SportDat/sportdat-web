@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportDat — Narraciones en vivo para clubes de fútbol base y amateur</title>
+  <meta name="description" content="Convierte cada partido en una experiencia digital con marcador en directo, avisos al móvil, resultados colaborativos y comunidad para tu club.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SportDat — Narraciones en vivo para clubes de fútbol base y amateur">
+  <meta property="og:description" content="Convierte cada partido en una experiencia digital con marcador en directo, avisos al móvil, resultados colaborativos y comunidad para tu club.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportdat.com">
+  <meta property="og:image" content="https://sportdat.com/assets/images/og-image.png">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Analytics -->
+  <script defer data-domain="sportdat.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="SportDat - Inicio">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="#1f3a5f" stroke-width="2.5"/>
+          <path d="M16 4 C16 4 10 12 10 16 C10 20 13 24 16 28 C19 24 22 20 22 16 C22 12 16 4 16 4Z" fill="#2ecc71" opacity="0.8"/>
+        </svg>
+        SportDat
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="#solucion">Solución</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <a href="https://app.sportdat.com" class="btn btn-outline header-cta" data-track-cta="header-app" target="_blank" rel="noopener">Acceder a la app</a>
+      <a href="piloto-sportdat.html" class="btn btn-primary header-cta" data-track-cta="header">Solicitar piloto</a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
+    <a href="/">Inicio</a>
+    <a href="#solucion">Solución</a>
+    <a href="#como-funciona">Cómo funciona</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="https://app.sportdat.com" target="_blank" rel="noopener">Acceder a la app</a>
+    <a href="piloto-sportdat.html" class="btn btn-primary" data-track-cta="mobile-nav">Solicitar piloto</a>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <h1>Narraciones en vivo para clubes de fútbol base y amateur</h1>
+            <p class="subtitle">Convierte cada partido en una experiencia digital: marcador en directo, avisos al móvil, resultados colaborativos y seguimiento para familias, aficionados y clubes.</p>
+            <div class="hero-ctas">
+              <a href="piloto-sportdat.html" class="btn btn-primary" data-track-cta="hero-primary">Solicitar piloto para mi club</a>
+              <a href="#como-funciona" class="btn btn-outline" data-track-cta="hero-secondary">Ver cómo funciona</a>
+              <a href="https://app.sportdat.com" class="btn btn-secondary" data-track-cta="hero-app" target="_blank" rel="noopener">Probar la app</a>
+            </div>
+            <p class="hero-note">Estamos preparando un piloto inicial con clubes seleccionados en categorías cadete y senior aficionado.</p>
+          </div>
+          <div class="hero-mockup" aria-hidden="true">
+            <div>
+              <p style="font-size:32px;margin-bottom:0.5rem">⚽</p>
+              <p style="font-size:20px;font-weight:700;margin-bottom:0.25rem;color:#fff">2 - 1</p>
+              <p style="font-size:13px;margin-bottom:1rem;color:rgba(255,255,255,0.8)">Min. 67 — En directo</p>
+              <p style="font-size:12px;color:rgba(255,255,255,0.6)">Mockup: pantalla de partido en vivo con marcador, timeline de eventos y notificación push</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problema -->
+    <section class="section-alt" id="problema">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Cada fin de semana se juegan cientos de partidos que muchas familias no pueden seguir</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <div class="card-icon">📱</div>
+            <h3>Información dispersa</h3>
+            <p>Resultados por WhatsApp, llamadas al banquillo, publicaciones en redes que llegan tarde. No hay un canal unificado.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">👁️</div>
+            <h3>Poco seguimiento en directo</h3>
+            <p>Solo quien está en el campo sabe qué pasa. Familias, abuelos y aficionados se quedan sin información hasta que termina el partido.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">📊</div>
+            <h3>Falta de visibilidad</h3>
+            <p>Muchos equipos no tienen presencia digital. Sin contenido, sin estadísticas, sin forma de mostrar lo que hacen cada semana.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solución -->
+    <section id="solucion">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>SportDat permite narrar partidos de forma rápida y segura</h2>
+          <p>Una herramienta pensada para el fútbol base: sencilla, respetuosa con la privacidad y adaptada a la realidad de los clubes.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f3a5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h3>Narración rápida</h3>
+            <p>Registra goles, tarjetas y eventos con un par de toques. Diseñado para narrar desde la grada con el móvil.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f3a5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Marcador en vivo</h3>
+            <p>Cualquier seguidor puede ver el marcador actualizado en tiempo real desde su móvil, sin necesidad de instalar nada.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f3a5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3>Notificaciones móviles</h3>
+            <p>Avisos de gol, inicio y final de partido directamente en el móvil de quien sigue al equipo.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f3a5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Resultados colaborativos</h3>
+            <p>La comunidad puede aportar resultados de partidos que no se narraron. Validación colectiva con badges de confianza.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f3a5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3>Estadísticas propias</h3>
+            <p>Resumen de temporada, goles, resultados y evolución del equipo. Datos generados automáticamente a partir de las narraciones.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f3a5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Página pública del equipo</h3>
+            <p>Cada equipo tiene su espacio con calendario, resultados y narraciones. Compartible por enlace, sin necesidad de app.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="section-alt" id="como-funciona">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Cómo funciona</h2>
+          <p>En cinco pasos, tu club puede tener narraciones en vivo cada fin de semana.</p>
+        </div>
+        <div class="timeline fade-in">
+          <div class="timeline-step" data-step="1">
+            <h3>El club activa uno o varios equipos</h3>
+            <p>Elige qué equipos quieres narrar. Puedes empezar con uno solo y ampliar después.</p>
+          </div>
+          <div class="timeline-step" data-step="2">
+            <h3>Un narrador registra eventos del partido</h3>
+            <p>Desde la grada, con el móvil. Goles, tarjetas, cambios y comentarios en tiempo real.</p>
+          </div>
+          <div class="timeline-step" data-step="3">
+            <h3>Los seguidores reciben avisos en el móvil</h3>
+            <p>Notificaciones push de gol, inicio y final. Sin necesidad de estar pendiente.</p>
+          </div>
+          <div class="timeline-step" data-step="4">
+            <h3>La comunidad completa resultados</h3>
+            <p>Si un partido no se narró, cualquier seguidor puede aportar el resultado. La comunidad lo valida.</p>
+          </div>
+          <div class="timeline-step" data-step="5">
+            <h3>SportDat genera estadísticas de temporada</h3>
+            <p>Clasificaciones, rachas, goles y resúmenes automáticos a partir de los datos registrados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios para clubes -->
+    <section id="beneficios">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Beneficios para clubes</h2>
+          <p>SportDat no sustituye a la federación. Añade una capa de comunicación, narración y comunidad.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <div class="card-icon">📣</div>
+            <h3>Comunicación inmediata</h3>
+            <p>Informa a familias y aficionados en tiempo real sin depender de redes sociales o grupos de WhatsApp.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">🌐</div>
+            <h3>Presencia digital</h3>
+            <p>Tu club tiene una página pública con resultados, calendario y narraciones. Profesionaliza tu imagen.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">📈</div>
+            <h3>Datos y estadísticas</h3>
+            <p>Accede a resúmenes de temporada, evolución de equipos y datos que antes no existían.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">🤝</div>
+            <h3>Comunidad activa</h3>
+            <p>Involucra a padres, madres y aficionados. Que participen aportando resultados y siguiendo partidos.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">🔒</div>
+            <h3>Privacidad de menores</h3>
+            <p>Narraciones sin nombres de jugadores menores. Diseñado para cumplir con la protección de datos desde el inicio.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card-icon">🚀</div>
+            <h3>Fácil de empezar</h3>
+            <p>Sin instalaciones complejas. Activa un equipo, asigna un narrador y empieza este fin de semana.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios para aficionados -->
+    <section class="section-alt" id="beneficios-aficionados">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Sigue a tu equipo aunque no puedas estar en el campo</h2>
+          <p>Para familias, abuelos, aficionados y cualquiera que quiera saber qué pasa en el partido.</p>
+        </div>
+        <div class="benefits-list fade-in">
+          <div class="benefit-item">
+            <div class="benefit-icon">⭐</div>
+            <div>
+              <h3>Sigue a tus equipos favoritos</h3>
+              <p>Marca los equipos que te interesan y recibe toda su actividad.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🔔</div>
+            <div>
+              <h3>Notificaciones de gol y resultado</h3>
+              <p>Te avisamos cuando marcan, cuando empieza y cuando termina el partido.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📖</div>
+            <div>
+              <h3>Consulta narraciones pasadas</h3>
+              <p>Revive partidos anteriores con el timeline completo de eventos.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">✋</div>
+            <div>
+              <h3>Aporta resultados</h3>
+              <p>Si estuviste en el campo, puedes confirmar o aportar el resultado del partido.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in" style="text-align:center;margin-top:2rem">
+          <a href="https://app.sportdat.com" class="btn btn-primary" data-track-cta="aficionados-app" target="_blank" rel="noopener">Prueba la app ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Narraciones seguras -->
+    <section id="narraciones-seguras">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Narraciones seguras y respetuosas</h2>
+          <p>En fútbol base, la privacidad de los menores es prioritaria. SportDat narra sin nombres de jugadores.</p>
+        </div>
+        <div class="narration-examples fade-in">
+          <div class="narration-bubble">⚽ "Gol del equipo local. Remate desde el borde del área tras un córner."</div>
+          <div class="narration-bubble">🟨 "Tarjeta amarilla para un jugador visitante por protestar."</div>
+          <div class="narration-bubble">🔄 "Cambio en el equipo local. Entra un jugador fresco en el medio."</div>
+          <div class="narration-bubble">⚽ "El delantero visitante remata fuera desde buena posición."</div>
+        </div>
+        <div class="fade-in" style="margin-top:2rem;text-align:center">
+          <p style="font-size:15px;max-width:560px;margin:0 auto"><strong>¿Por qué?</strong> Porque en categorías de menores no se deben publicar datos personales sin consentimiento. SportDat permite narrar la emoción del partido sin comprometer la privacidad de nadie.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comunidad -->
+    <section class="section-alt" id="comunidad">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Resultados validados por la comunidad</h2>
+          <p>Cuando un partido no se narra en directo, la comunidad puede aportar el resultado. Un sistema de badges indica el nivel de confianza.</p>
+        </div>
+        <div class="fade-in" style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2rem">
+          <span class="badge badge-pending">⏳ Pendiente</span>
+          <span class="badge badge-community">👥 Comunidad</span>
+          <span class="badge badge-club">✅ Club</span>
+          <span class="badge badge-review">🔍 En revisión</span>
+        </div>
+        <div class="fade-in" style="text-align:center">
+          <p style="max-width:560px;margin:0 auto;font-size:15px">Los resultados pasan de "pendiente" a "confirmado por comunidad" cuando varios usuarios coinciden. El club puede validar oficialmente en cualquier momento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Piloto inicial -->
+    <section id="piloto">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Buscamos clubes para participar en el piloto inicial</h2>
+          <p>Estamos seleccionando clubes para probar SportDat en condiciones reales. Participar es gratuito.</p>
+        </div>
+        <div class="cards-grid fade-in" style="max-width:800px;margin:0 auto 2.5rem">
+          <div class="card">
+            <div class="card-icon">✅</div>
+            <h3>Acceso completo a la plataforma</h3>
+            <p>Todas las funcionalidades disponibles para tus equipos durante el piloto.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎓</div>
+            <h3>Formación para narradores</h3>
+            <p>Acompañamiento para que vuestros narradores se sientan cómodos desde el primer partido.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">💬</div>
+            <h3>Soporte directo</h3>
+            <p>Canal de comunicación directa con el equipo de SportDat durante todo el piloto.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>Informe de resultados</h3>
+            <p>Al final del piloto, recibirás un resumen con datos de uso, engagement y feedback.</p>
+          </div>
+        </div>
+        <div class="fade-in" style="text-align:center">
+          <a href="piloto-sportdat.html" class="btn btn-primary" data-track-cta="piloto-section">Quiero que mi club participe</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cierre / CTA final -->
+    <section class="section-dark cta-section">
+      <div class="container fade-in">
+        <h2>Empieza con uno o dos equipos.<br>Si funciona, extiéndelo al resto del club.</h2>
+        <p>No necesitas comprometer a todo el club desde el principio. Prueba con un equipo y decide después.</p>
+        <div class="cta-buttons">
+          <a href="piloto-sportdat.html" class="btn btn-primary" data-track-cta="cierre-primary">Solicitar piloto para mi club</a>
+          <a href="contacto.html" class="btn btn-white" data-track-cta="cierre-secondary">Hablar con SportDat</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="28" height="28">
+              <circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="2.5"/>
+              <path d="M16 4 C16 4 10 12 10 16 C10 20 13 24 16 28 C19 24 22 20 22 16 C22 12 16 4 16 4Z" fill="#2ecc71" opacity="0.8"/>
+            </svg>
+            SportDat
+          </div>
+          <p>Narraciones en vivo para clubes de fútbol base y amateur.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Producto</h4>
+          <ul>
+            <li><a href="#solucion">Solución</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#beneficios">Para clubes</a></li>
+            <li><a href="#beneficios-aficionados">Para aficionados</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Participar</h4>
+          <ul>
+            <li><a href="piloto-sportdat.html">Solicitar piloto</a></li>
+            <li><a href="https://app.sportdat.com" target="_blank" rel="noopener">Acceder a la app</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@sportdat.com">hola@sportdat.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>SportDat no sustituye datos oficiales de federaciones. © 2024 SportDat.</p>
+        <div class="footer-legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>window.SPORTDAT_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxT82AON7OJC_5Tut-_wra5DtWDTZ7ulI_zex3OHpSz-ju2ZG4mPIsosfZ77s2lTehS8A/exec';</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

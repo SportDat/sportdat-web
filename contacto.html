@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — SportDat</title>
+  <meta name="description" content="Contacta con el equipo de SportDat. Estamos aquí para resolver tus dudas sobre narraciones en vivo para clubes de fútbol base.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contacto — SportDat">
+  <meta property="og:description" content="Contacta con el equipo de SportDat. Estamos aquí para resolver tus dudas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportdat.com/contacto.html">
+  <meta property="og:image" content="https://sportdat.com/assets/images/og-image.png">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Analytics -->
+  <script defer data-domain="sportdat.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="SportDat - Inicio">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="#1f3a5f" stroke-width="2.5"/>
+          <path d="M16 4 C16 4 10 12 10 16 C10 20 13 24 16 28 C19 24 22 20 22 16 C22 12 16 4 16 4Z" fill="#2ecc71" opacity="0.8"/>
+        </svg>
+        SportDat
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/#solucion">Solución</a>
+        <a href="/#como-funciona">Cómo funciona</a>
+        <a href="/#beneficios">Beneficios</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <a href="piloto-sportdat.html" class="btn btn-primary header-cta" data-track-cta="header">Solicitar piloto</a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
+    <a href="/">Inicio</a>
+    <a href="/#solucion">Solución</a>
+    <a href="/#como-funciona">Cómo funciona</a>
+    <a href="/#beneficios">Beneficios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="piloto-sportdat.html" class="btn btn-primary">Solicitar piloto</a>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" style="padding-bottom:2rem">
+      <div class="container">
+        <div class="section-header">
+          <h1>Contacta con nosotros</h1>
+          <p>¿Tienes dudas sobre SportDat? ¿Quieres saber más antes de solicitar el piloto? Escríbenos y te respondemos en menos de 24 horas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section style="padding-top:2rem">
+      <div class="container">
+        <div class="form-container">
+          <form id="contact-form" data-validate>
+            <!-- Name -->
+            <div class="form-group">
+              <label for="contact-name">Nombre <span class="required">*</span></label>
+              <input type="text" id="contact-name" name="name" required placeholder="Tu nombre">
+              <span class="error-message">Este campo es obligatorio</span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="contact-email">Email <span class="required">*</span></label>
+              <input type="email" id="contact-email" name="email" required placeholder="tu@email.com">
+              <span class="error-message">Introduce un email válido</span>
+            </div>
+
+            <!-- Type of inquiry -->
+            <div class="form-group">
+              <label for="inquiry-type">Tipo de consulta <span class="required">*</span></label>
+              <select id="inquiry-type" name="inquiry_type" required>
+                <option value="">Selecciona una opción</option>
+                <option value="informacion">Quiero más información</option>
+                <option value="piloto">Dudas sobre el piloto</option>
+                <option value="colaboracion">Propuesta de colaboración</option>
+                <option value="prensa">Prensa / medios</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="error-message">Selecciona el tipo de consulta</span>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">Mensaje <span class="required">*</span></label>
+              <textarea id="message" name="message" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+              <span class="error-message">Escribe tu mensaje</span>
+            </div>
+
+            <!-- Privacy -->
+            <div class="form-group">
+              <div class="privacy-check">
+                <input type="checkbox" id="contact-privacy" name="privacy" required>
+                <label for="contact-privacy">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos para gestionar esta consulta. <span class="required">*</span></label>
+              </div>
+              <span class="error-message">Debes aceptar la política de privacidad</span>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group" style="text-align:center;margin-top:2rem">
+              <button type="submit" class="btn btn-primary" data-track-cta="contact-form-submit">Enviar mensaje</button>
+            </div>
+          </form>
+
+          <!-- Success message -->
+          <div class="form-success">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Gracias por escribirnos. Te responderemos en menos de 24 horas.</p>
+            <a href="/" class="btn btn-outline" style="margin-top:1.5rem">Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="28" height="28">
+              <circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="2.5"/>
+              <path d="M16 4 C16 4 10 12 10 16 C10 20 13 24 16 28 C19 24 22 20 22 16 C22 12 16 4 16 4Z" fill="#2ecc71" opacity="0.8"/>
+            </svg>
+            SportDat
+          </div>
+          <p>Narraciones en vivo para clubes de fútbol base y amateur.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Producto</h4>
+          <ul>
+            <li><a href="/#solucion">Solución</a></li>
+            <li><a href="/#como-funciona">Cómo funciona</a></li>
+            <li><a href="/#beneficios">Para clubes</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Participar</h4>
+          <ul>
+            <li><a href="piloto-sportdat.html">Solicitar piloto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@sportdat.com">hola@sportdat.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>SportDat no sustituye datos oficiales de federaciones. © 2024 SportDat.</p>
+        <div class="footer-legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>window.SPORTDAT_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxT82AON7OJC_5Tut-_wra5DtWDTZ7ulI_zex3OHpSz-ju2ZG4mPIsosfZ77s2lTehS8A/exec';</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
