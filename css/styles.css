@@ -177,17 +177,13 @@ section {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: var(--font-weight-extrabold);
-  color: var(--color-primary);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
-.logo svg {
-  width: 32px;
-  height: 32px;
+.logo img {
+  height: 36px;
+  width: auto;
 }
 
 .nav-links {

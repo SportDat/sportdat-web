@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto — SportDat</title>
-  <meta name="description" content="Contacta con el equipo de SportDat. Estamos aquí para resolver tus dudas sobre narraciones en vivo para clubes de fútbol base.">
+  <title>Eliminar cuenta — SportDat</title>
+  <meta name="description" content="Solicita la eliminación de tu cuenta y todos los datos asociados en SportDat.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Contacto — SportDat">
-  <meta property="og:description" content="Contacta con el equipo de SportDat. Estamos aquí para resolver tus dudas.">
+  <meta property="og:title" content="Eliminar cuenta — SportDat">
+  <meta property="og:description" content="Solicita la eliminación de tu cuenta y todos los datos asociados en SportDat.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sportdat.com/contacto.html">
+  <meta property="og:url" content="https://sportdat.com/eliminar-cuenta.html">
   <meta property="og:image" content="https://sportdat.com/assets/images/og-image.png">
   <meta property="og:locale" content="es_ES">
 
@@ -76,64 +76,81 @@
     <section class="hero" style="padding-bottom:2rem">
       <div class="container">
         <div class="section-header">
-          <h1>Contacta con nosotros</h1>
-          <p>¿Tienes dudas sobre SportDat? ¿Quieres saber más antes de solicitar el piloto? Escríbenos y te respondemos en menos de 24 horas.</p>
+          <h1>Eliminar cuenta y datos</h1>
+          <p>Si deseas eliminar tu cuenta de SportDat y todos los datos asociados, completa el formulario a continuación. Procesaremos tu solicitud en un plazo máximo de 30 días.</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact Form -->
-    <section style="padding-top:2rem">
+    <!-- Info section -->
+    <section style="padding-top:0;padding-bottom:2rem">
       <div class="container">
         <div class="form-container">
-          <form id="contact-form" data-validate>
+          <div style="background:var(--color-light);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem;border:1px solid var(--color-border)">
+            <h3 style="margin-bottom:0.75rem">¿Qué datos se eliminarán?</h3>
+            <ul style="list-style:disc;padding-left:1.25rem;display:flex;flex-direction:column;gap:0.5rem">
+              <li style="color:var(--color-gray);font-size:15px">Tu perfil de usuario y credenciales de acceso</li>
+              <li style="color:var(--color-gray);font-size:15px">Equipos que sigas y preferencias de notificación</li>
+              <li style="color:var(--color-gray);font-size:15px">Historial de narraciones realizadas por ti</li>
+              <li style="color:var(--color-gray);font-size:15px">Resultados aportados y validaciones</li>
+              <li style="color:var(--color-gray);font-size:15px">Cualquier otro dato personal asociado a tu cuenta</li>
+            </ul>
+            <p style="margin-top:1rem;margin-bottom:0;font-size:14px;color:var(--color-gray)"><strong>Nota:</strong> Los datos estadísticos anonimizados (resultados de partidos ya validados por la comunidad) pueden conservarse de forma no identificable, según nuestra política de privacidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delete Account Form -->
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="form-container">
+          <form id="delete-account-form" data-validate>
+            <!-- Email -->
+            <div class="form-group">
+              <label for="delete-email">Email de tu cuenta <span class="required">*</span></label>
+              <input type="email" id="delete-email" name="email" required placeholder="El email con el que te registraste">
+              <span class="error-message">Introduce el email asociado a tu cuenta</span>
+            </div>
+
             <!-- Name -->
             <div class="form-group">
-              <label for="contact-name">Nombre <span class="required">*</span></label>
-              <input type="text" id="contact-name" name="name" required placeholder="Tu nombre">
+              <label for="delete-name">Nombre completo <span class="required">*</span></label>
+              <input type="text" id="delete-name" name="name" required placeholder="Tu nombre completo">
               <span class="error-message">Este campo es obligatorio</span>
             </div>
 
-            <!-- Email -->
+            <!-- Reason -->
             <div class="form-group">
-              <label for="contact-email">Email <span class="required">*</span></label>
-              <input type="email" id="contact-email" name="email" required placeholder="tu@email.com">
-              <span class="error-message">Introduce un email válido</span>
-            </div>
-
-            <!-- Type of inquiry -->
-            <div class="form-group">
-              <label for="inquiry-type">Tipo de consulta <span class="required">*</span></label>
-              <select id="inquiry-type" name="inquiry_type" required>
-                <option value="">Selecciona una opción</option>
-                <option value="informacion">Quiero más información</option>
-                <option value="piloto">Dudas sobre el piloto</option>
-                <option value="colaboracion">Propuesta de colaboración</option>
-                <option value="prensa">Prensa / medios</option>
-                <option value="otro">Otro</option>
+              <label for="delete-reason">Motivo (opcional)</label>
+              <select id="delete-reason" name="reason">
+                <option value="">Selecciona un motivo (opcional)</option>
+                <option value="no-uso">Ya no uso la aplicación</option>
+                <option value="privacidad">Preocupación por la privacidad</option>
+                <option value="otra-app">Uso otra aplicación</option>
+                <option value="experiencia">No me ha gustado la experiencia</option>
+                <option value="otro">Otro motivo</option>
               </select>
-              <span class="error-message">Selecciona el tipo de consulta</span>
             </div>
 
-            <!-- Message -->
+            <!-- Additional comments -->
             <div class="form-group">
-              <label for="message">Mensaje <span class="required">*</span></label>
-              <textarea id="message" name="message" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
-              <span class="error-message">Escribe tu mensaje</span>
+              <label for="delete-comments">Comentarios adicionales (opcional)</label>
+              <textarea id="delete-comments" name="comments" placeholder="Si quieres, cuéntanos algo más que nos ayude a mejorar..." style="min-height:80px"></textarea>
             </div>
 
-            <!-- Privacy -->
+            <!-- Confirmation -->
             <div class="form-group">
               <div class="privacy-check">
-                <input type="checkbox" id="contact-privacy" name="privacy" required>
-                <label for="contact-privacy">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos para gestionar esta consulta. <span class="required">*</span></label>
+                <input type="checkbox" id="delete-confirm" name="confirm" required>
+                <label for="delete-confirm">Entiendo que esta acción es <strong>irreversible</strong> y que todos mis datos serán eliminados permanentemente. <span class="required">*</span></label>
               </div>
-              <span class="error-message">Debes aceptar la política de privacidad</span>
+              <span class="error-message">Debes confirmar que entiendes que la eliminación es irreversible</span>
             </div>
 
             <!-- Submit -->
             <div class="form-group" style="text-align:center;margin-top:2rem">
-              <button type="submit" class="btn btn-primary" data-track-cta="contact-form-submit">Enviar mensaje</button>
+              <button type="submit" class="btn btn-primary" style="background:#dc2626;box-shadow:0 4px 12px rgba(220,38,38,0.3)" data-track-cta="delete-account-submit">Solicitar eliminación de cuenta</button>
             </div>
           </form>
 
@@ -142,8 +159,9 @@
             <div class="success-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <h3>¡Mensaje enviado!</h3>
-            <p>Gracias por escribirnos. Te responderemos en menos de 24 horas.</p>
+            <h3>Solicitud recibida</h3>
+            <p>Hemos recibido tu solicitud de eliminación de cuenta. Procesaremos la eliminación en un plazo máximo de 30 días y te enviaremos una confirmación por email.</p>
+            <p style="font-size:14px">Si tienes alguna duda, puedes escribirnos a <a href="mailto:hola@sportdat.com" style="color:var(--color-primary);text-decoration:underline">hola@sportdat.com</a></p>
             <a href="/" class="btn btn-outline" style="margin-top:1.5rem">Volver al inicio</a>
           </div>
         </div>
