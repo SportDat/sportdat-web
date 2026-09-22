@@ -209,4 +209,68 @@
     });
   });
 
+  // --- Video / Tutorials grid ---
+  // Data-driven so cards can be edited or linked to real videos easily.
+  // To publish a video, set its `url` to the YouTube/Vimeo/hosted link.
+  // While `url` is empty, the card shows a "Próximamente" state.
+  var SPORTDAT_VIDEOS = [
+    { title: 'Qué es SportDat', desc: 'Presentación rápida de la app y para qué sirve.', tag: 'Seguidores', tagClass: 'seguidores', duration: '1:30', url: '' },
+    { title: 'Cómo seguir un equipo', desc: 'Activa tus equipos favoritos y empieza a recibir información.', tag: 'Seguidores', tagClass: 'seguidores', duration: '1:20', url: '' },
+    { title: 'Cómo ver un partido narrado', desc: 'Marcador, eventos, comentarios y seguimiento en directo.', tag: 'Seguidores', tagClass: 'seguidores', duration: '2:00', url: '' },
+    { title: 'Cómo convertirse en cronista', desc: 'Primeros pasos para narrar un partido desde el campo.', tag: 'Cronistas', tagClass: 'cronistas', duration: '2:10', url: '' },
+    { title: 'Cómo enviar un evento del partido', desc: 'Uso básico de los botones y eventos de narración.', tag: 'Cronistas', tagClass: 'cronistas', duration: '1:45', url: '' },
+    { title: 'Cómo se reciben las notificaciones', desc: 'Avisos importantes en el móvil durante el partido.', tag: 'Seguidores', tagClass: 'seguidores', duration: '1:15', url: '' },
+    { title: 'Cómo consultar estadísticas', desc: 'Revisión de resultados, evolución y clasificación.', tag: 'Seguidores', tagClass: 'seguidores', duration: '1:50', url: '' },
+    { title: 'Privacidad y uso responsable', desc: 'Cómo SportDat protege la información y fomenta narraciones respetuosas.', tag: 'Privacidad', tagClass: 'privacidad', duration: '2:00', url: '' },
+    { title: 'SportDat para clubes', desc: 'Cómo un club puede presentar la app a su afición.', tag: 'Clubes', tagClass: 'clubes', duration: '2:20', url: '' },
+    { title: 'Cómo solicitar una demo/piloto', desc: 'Pasos para contactar y organizar una prueba con el club.', tag: 'Clubes', tagClass: 'clubes', duration: '1:40', url: '' }
+  ];
+
+  var videoGrid = document.getElementById('video-grid');
+
+  if (videoGrid) {
+    var playIcon = '<span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>';
+
+    SPORTDAT_VIDEOS.forEach(function (video, index) {
+      var hasUrl = !!video.url;
+      var num = index + 1;
+
+      var card = document.createElement(hasUrl ? 'a' : 'article');
+      card.className = 'video-card' + (hasUrl ? '' : ' soon');
+
+      if (hasUrl) {
+        card.href = video.url;
+        card.target = '_blank';
+        card.rel = 'noopener';
+        card.setAttribute('data-track-cta', 'video-' + num);
+        card.setAttribute('aria-label', 'Ver vídeo: ' + video.title);
+      }
+
+      var thumbLabel = hasUrl ? 'Reproducir vídeo' : 'Miniatura provisional del vídeo';
+      var actionText = hasUrl ? 'Ver vídeo' : 'Próximamente';
+
+      card.innerHTML =
+        '<div class="video-thumb" role="img" aria-label="' + thumbLabel + ': ' + video.title + '">' +
+          '<span class="video-num" aria-hidden="true">' + num + '</span>' +
+          playIcon +
+          '<span class="duration">' + video.duration + '</span>' +
+        '</div>' +
+        '<div class="video-info">' +
+          '<span class="video-tag ' + video.tagClass + '">' + video.tag + '</span>' +
+          '<h3>' + video.title + '</h3>' +
+          '<p>' + video.desc + '</p>' +
+          '<span class="video-action">' + actionText + '</span>' +
+        '</div>';
+
+      videoGrid.appendChild(card);
+
+      // Track clicks on published videos (mirrors data-track-cta behavior)
+      if (hasUrl) {
+        card.addEventListener('click', function () {
+          trackEvent('Video Click', { video: video.title });
+        });
+      }
+    });
+  }
+
 })();

@@ -1053,3 +1053,669 @@ section {
 .legal-content a:hover {
   color: var(--color-tertiary);
 }
+
+/* ===========================
+   Launch redesign components
+   (reusable patterns — mobile-first)
+   =========================== */
+
+/* --- Trust strip (hero confidence chips) --- */
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  box-shadow: 0 1px 3px rgba(31, 58, 95, 0.05);
+}
+
+.trust-chip svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.free-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1.25rem;
+}
+
+/* --- Phone frame (reusable app mockup) --- */
+.phone-frame {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  aspect-ratio: 9 / 19;
+  background: var(--color-dark);
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: var(--shadow-lg);
+  flex-shrink: 0;
+}
+
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 18px;
+  background: #000;
+  border-radius: 12px;
+  z-index: 3;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* A subtle "provisional capture" tag on mockups */
+.phone-frame .mock-tag {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(27, 30, 35, 0.6);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+}
+
+/* Landscape variant for the "cronista" narration step */
+.phone-frame.landscape {
+  max-width: 420px;
+  aspect-ratio: 19 / 10;
+  border-radius: 26px;
+}
+
+.phone-frame.landscape::before {
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 56px;
+}
+
+/* --- Mock screen internals (fake app UI) --- */
+.mock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: var(--color-dark);
+}
+
+.mock-header {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.75rem 0.875rem 0.75rem;
+  text-align: center;
+}
+
+.mock-header .mock-title {
+  font-size: 13px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+
+.mock-header .mock-sub {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.mock-body {
+  flex: 1;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+/* Team follow list */
+.mock-team {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 0.5rem 0.625rem;
+}
+
+.mock-team .mock-crest {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.mock-team .mock-name {
+  flex: 1;
+  font-weight: var(--font-weight-medium);
+  font-size: 11.5px;
+}
+
+.mock-follow {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-success);
+}
+
+.mock-follow.on {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+  border-color: var(--color-secondary);
+}
+
+/* Live scoreboard */
+.mock-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.mock-score .team {
+  text-align: center;
+  flex: 1;
+}
+
+.mock-score .team span {
+  display: block;
+  font-size: 10.5px;
+  font-weight: var(--font-weight-medium);
+}
+
+.mock-score .num {
+  font-size: 26px;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary);
+}
+
+.mock-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9.5px;
+  font-weight: var(--font-weight-bold);
+  color: #dc2626;
+}
+
+.mock-live::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #dc2626;
+}
+
+/* Event rows */
+.mock-event {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 11px;
+  padding: 0.375rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.mock-event .min {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray);
+  min-width: 26px;
+}
+
+/* Push notifications */
+.mock-push {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 0.5rem 0.625rem;
+  box-shadow: 0 2px 8px rgba(31, 58, 95, 0.1);
+}
+
+.mock-push .push-ico {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.mock-push .push-body strong {
+  display: block;
+  font-size: 11px;
+}
+
+.mock-push .push-body span {
+  font-size: 10px;
+  color: var(--color-gray);
+}
+
+/* Standings / stats table */
+.mock-table {
+  width: 100%;
+  font-size: 10.5px;
+  border-collapse: collapse;
+}
+
+.mock-table th,
+.mock-table td {
+  padding: 4px 5px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mock-table th {
+  color: var(--color-gray);
+  font-weight: var(--font-weight-bold);
+  font-size: 9.5px;
+  text-transform: uppercase;
+}
+
+.mock-table tr.me {
+  background: rgba(46, 204, 113, 0.12);
+  font-weight: var(--font-weight-bold);
+}
+
+.mock-table td.c,
+.mock-table th.c {
+  text-align: center;
+}
+
+/* Narration controls (landscape) */
+.mock-pitch {
+  flex: 1;
+  background:
+    linear-gradient(rgba(31, 58, 95, 0.08), rgba(31, 58, 95, 0.08)),
+    var(--color-secondary);
+  border-radius: 8px;
+  margin: 0.5rem;
+  position: relative;
+  opacity: 0.85;
+}
+
+.mock-pitch::before,
+.mock-pitch::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  width: 18%;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.mock-pitch::before { left: 0; border-left: none; }
+.mock-pitch::after { right: 0; border-right: none; }
+
+.mock-controls {
+  display: flex;
+  gap: 0.375rem;
+  padding: 0 0.5rem 0.5rem;
+  flex-wrap: wrap;
+}
+
+.mock-btn {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  padding: 5px 9px;
+  border-radius: 8px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-dark);
+}
+
+.mock-btn.send {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+  border-color: var(--color-secondary);
+}
+
+.mock-seal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 4;
+  font-size: 9px;
+  font-weight: var(--font-weight-bold);
+  background: rgba(27, 30, 35, 0.72);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+/* --- Feature steps ("Cómo funciona") --- */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.feature-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.feature-step .step-media {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.feature-step .step-text {
+  text-align: center;
+  max-width: 520px;
+}
+
+.feature-step .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  color: var(--color-dark);
+  font-weight: var(--font-weight-extrabold);
+  font-size: 15px;
+  margin-bottom: 0.875rem;
+}
+
+.feature-step .step-text h3 {
+  margin-bottom: 0.625rem;
+  color: var(--color-primary);
+  font-size: 22px;
+}
+
+.feature-step .step-text p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/* --- Privacy band (transversal) --- */
+.privacy-band {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-tertiary));
+  color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 2.5rem 1.75rem;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.privacy-band h2 {
+  color: var(--color-white);
+}
+
+.privacy-band p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 17px;
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+}
+
+.privacy-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  justify-content: center;
+}
+
+.privacy-pills span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 0.5rem 0.875rem;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: var(--font-weight-medium);
+}
+
+/* --- Video / tutorials grid --- */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.video-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-tertiary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-thumb .play {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition);
+}
+
+.video-card:hover .video-thumb .play {
+  transform: scale(1.08);
+}
+
+.video-thumb .play svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-primary);
+  margin-left: 3px;
+}
+
+.video-thumb .duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(27, 30, 35, 0.78);
+  color: #fff;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+
+.video-thumb .video-num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 34px;
+  font-weight: var(--font-weight-extrabold);
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1;
+}
+
+.video-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.video-info h3 {
+  font-size: 17px;
+}
+
+.video-info p {
+  font-size: 14px;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.video-tag {
+  align-self: flex-start;
+  font-size: 11.5px;
+  font-weight: var(--font-weight-bold);
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+}
+
+.video-tag.seguidores { background: #dbeafe; color: #1e40af; }
+.video-tag.cronistas  { background: #fef3c7; color: #92400e; }
+.video-tag.clubes     { background: #d1fae5; color: #065f46; }
+.video-tag.privacidad { background: #ede9fe; color: #5b21b6; }
+
+.video-action {
+  margin-top: 0.5rem;
+  font-size: 13.5px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.video-card.soon .video-thumb .play {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.video-card.soon .video-action {
+  color: var(--color-gray);
+}
+
+/* --- Demo/pilot inline block --- */
+.demo-block {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2.5rem 1.75rem;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+}
+
+.demo-block .privacy-note {
+  font-size: 13.5px;
+  color: var(--color-gray);
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+/* --- Responsive: Tablet (768px) --- */
+@media (min-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .phone-frame {
+    max-width: 280px;
+  }
+}
+
+/* --- Responsive: Desktop (1024px) --- */
+@media (min-width: 1024px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Alternate text/image layout for steps on desktop */
+  .feature-step {
+    flex-direction: row;
+    gap: 3.5rem;
+    justify-content: center;
+  }
+
+  .feature-step .step-media,
+  .feature-step .step-text {
+    flex: 1;
+  }
+
+  .feature-step .step-text {
+    text-align: left;
+    max-width: none;
+  }
+
+  .feature-step.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .feature-step.wide .step-media {
+    flex: 1.3;
+  }
+}
