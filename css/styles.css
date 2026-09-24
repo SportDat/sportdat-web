@@ -1797,3 +1797,61 @@ body {
     padding: 0 1.25rem;
   }
 }
+
+/* Capturas reales: estilos limitados a Cómo funciona. */
+#como-funciona .walkthrough-hint { font-size: 14px; margin-top: .75rem; }
+#como-funciona .walkthrough-media { align-items: flex-start; gap: 1rem; }
+#como-funciona .walkthrough-shot { margin: 0; min-width: 0; flex: 1 1 0; max-width: 210px; }
+#como-funciona .walkthrough-shot a { display: block; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: var(--color-white); box-shadow: var(--shadow); cursor: zoom-in; }
+#como-funciona .walkthrough-shot a:focus-visible, #como-funciona summary:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 5px; }
+#como-funciona .walkthrough-shot img { width: 100%; height: auto; }
+#como-funciona .walkthrough-shot figcaption { color: var(--color-gray); font-size: 13px; line-height: 1.5; text-align: center; margin-top: .625rem; }
+#como-funciona .walkthrough-landscape { flex-direction: column; align-items: center; }
+#como-funciona .walkthrough-landscape .walkthrough-shot { flex: auto; width: 100%; max-width: 560px; }
+#como-funciona .walkthrough-note { margin-top: .875rem; }
+#como-funciona .walkthrough-details { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.25rem; }
+#como-funciona .walkthrough-details summary { cursor: pointer; color: var(--color-primary); font-weight: var(--font-weight-bold); }
+#como-funciona .walkthrough-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+#como-funciona .walkthrough-gallery .walkthrough-shot { max-width: none; }
+@media (max-width: 599px) {
+  #como-funciona .walkthrough-gallery { grid-template-columns: 1fr; }
+  #como-funciona .walkthrough-shot figcaption { font-size: 12px; }
+}
+
+/* Captura principal y presentación de la página de inicio. */
+.hero .hero-app-capture { aspect-ratio: auto; }
+.hero .hero-app-capture::before { display: none; }
+.hero .hero-app-capture img { width: 100%; height: auto; }
+#como-funciona .walkthrough-home { flex-direction: column; gap: 1.5rem; }
+#como-funciona .walkthrough-home .step-text { max-width: 820px; text-align: center; }
+#como-funciona .walkthrough-home-shots { display: grid; grid-template-columns: repeat(3, minmax(0, 210px)); gap: 1.5rem; }
+#como-funciona .walkthrough-home-shots .walkthrough-shot { width: 100%; max-width: none; }
+@media (max-width: 599px) {
+  #como-funciona .walkthrough-home-shots { grid-template-columns: minmax(0, 240px); }
+}
+
+/* Marcos de móvil para todas las capturas reales, sin recortar su contenido. */
+#como-funciona .walkthrough-shot a {
+  border: 0;
+  border-radius: 24px;
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+}
+#como-funciona .screenshot-frame {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  padding: 8px;
+  border-radius: 24px;
+  background: var(--color-dark);
+  box-shadow: var(--shadow-lg);
+}
+#como-funciona .screenshot-frame::before { display: none; }
+#como-funciona .screenshot-frame .phone-screen { height: auto; border-radius: 17px; }
+#como-funciona .screenshot-landscape { padding: 8px 12px; }
+@media (max-width: 599px) {
+  #como-funciona .screenshot-frame { padding: 6px; border-radius: 20px; }
+  #como-funciona .screenshot-frame .phone-screen { border-radius: 14px; }
+  #como-funciona .screenshot-landscape { padding: 6px 10px; }
+}
